@@ -9,21 +9,35 @@
 /* Begin PBXBuildFile section */
 		36BFFD01524845461638D909 /* libPods-drumpad.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CEFE84DF7956519BAA27E3BE /* libPods-drumpad.a */; };
 		B04B5B7C2058532C00FBF999 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B04B5B7B2058532C00FBF999 /* AppDelegate.swift */; };
-		B04B5B7E2058532C00FBF999 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B04B5B7D2058532C00FBF999 /* ViewController.swift */; };
+		B04B5B7E2058532C00FBF999 /* DrumPadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B04B5B7D2058532C00FBF999 /* DrumPadViewController.swift */; };
 		B04B5B812058532C00FBF999 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B04B5B7F2058532C00FBF999 /* Main.storyboard */; };
 		B04B5B832058532C00FBF999 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B04B5B822058532C00FBF999 /* Assets.xcassets */; };
 		B04B5B862058532C00FBF999 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B04B5B842058532C00FBF999 /* LaunchScreen.storyboard */; };
+		B0813DFA2081AA9800979347 /* DrumPadViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0813DF92081AA9700979347 /* DrumPadViewModel.swift */; };
+		B081CA062081C1BE00F7732A /* DrumPadCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B081CA042081C1BE00F7732A /* DrumPadCollectionViewCell.swift */; };
+		B08FA2D92081A6E400700D93 /* DrumPadViewController+UICollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B08FA2D82081A6E400700D93 /* DrumPadViewController+UICollectionView.swift */; };
+		B0B3E3A22083E73800275C1E /* kick.wav in Resources */ = {isa = PBXBuildFile; fileRef = B0B3E3A12083E73800275C1E /* kick.wav */; };
+		B0B3E3A42083EB3B00275C1E /* DrumPadCollectionViewFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0B3E3A32083EB3B00275C1E /* DrumPadCollectionViewFlowLayout.swift */; };
+		B0E27AE120740AEE0035EA19 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0E27AE020740AEE0035EA19 /* UIColor.swift */; };
+		B0E27AE52075223B0035EA19 /* AudioSampler.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0E27AE42075223B0035EA19 /* AudioSampler.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		391380ABF586372BA59AAE89 /* Pods-drumpad.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-drumpad.release.xcconfig"; path = "Pods/Target Support Files/Pods-drumpad/Pods-drumpad.release.xcconfig"; sourceTree = "<group>"; };
 		B04B5B782058532C00FBF999 /* drumpad.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = drumpad.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B04B5B7B2058532C00FBF999 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		B04B5B7D2058532C00FBF999 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		B04B5B7D2058532C00FBF999 /* DrumPadViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrumPadViewController.swift; sourceTree = "<group>"; };
 		B04B5B802058532C00FBF999 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B04B5B822058532C00FBF999 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B04B5B852058532C00FBF999 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B04B5B872058532C00FBF999 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B0813DF92081AA9700979347 /* DrumPadViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrumPadViewModel.swift; sourceTree = "<group>"; };
+		B081CA042081C1BE00F7732A /* DrumPadCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrumPadCollectionViewCell.swift; sourceTree = "<group>"; };
+		B08FA2D82081A6E400700D93 /* DrumPadViewController+UICollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DrumPadViewController+UICollectionView.swift"; sourceTree = "<group>"; };
+		B0B3E3A12083E73800275C1E /* kick.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = kick.wav; sourceTree = "<group>"; };
+		B0B3E3A32083EB3B00275C1E /* DrumPadCollectionViewFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrumPadCollectionViewFlowLayout.swift; sourceTree = "<group>"; };
+		B0E27AE020740AEE0035EA19 /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
+		B0E27AE42075223B0035EA19 /* AudioSampler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioSampler.swift; sourceTree = "<group>"; };
 		BD74B333B62641EF46D46E9C /* Pods-drumpad.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-drumpad.debug.xcconfig"; path = "Pods/Target Support Files/Pods-drumpad/Pods-drumpad.debug.xcconfig"; sourceTree = "<group>"; };
 		CEFE84DF7956519BAA27E3BE /* libPods-drumpad.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-drumpad.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -69,8 +83,15 @@
 		B04B5B7A2058532C00FBF999 /* drumpad */ = {
 			isa = PBXGroup;
 			children = (
+				B0B3E3A12083E73800275C1E /* kick.wav */,
 				B04B5B7B2058532C00FBF999 /* AppDelegate.swift */,
-				B04B5B7D2058532C00FBF999 /* ViewController.swift */,
+				B0E27AE42075223B0035EA19 /* AudioSampler.swift */,
+				B0813DF92081AA9700979347 /* DrumPadViewModel.swift */,
+				B04B5B7D2058532C00FBF999 /* DrumPadViewController.swift */,
+				B08FA2D82081A6E400700D93 /* DrumPadViewController+UICollectionView.swift */,
+				B0B3E3A32083EB3B00275C1E /* DrumPadCollectionViewFlowLayout.swift */,
+				B081CA042081C1BE00F7732A /* DrumPadCollectionViewCell.swift */,
+				B0E27AE020740AEE0035EA19 /* UIColor.swift */,
 				B04B5B7F2058532C00FBF999 /* Main.storyboard */,
 				B04B5B822058532C00FBF999 /* Assets.xcassets */,
 				B04B5B842058532C00FBF999 /* LaunchScreen.storyboard */,
@@ -150,6 +171,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B0B3E3A22083E73800275C1E /* kick.wav in Resources */,
 				B04B5B862058532C00FBF999 /* LaunchScreen.storyboard in Resources */,
 				B04B5B832058532C00FBF999 /* Assets.xcassets in Resources */,
 				B04B5B812058532C00FBF999 /* Main.storyboard in Resources */,
@@ -219,7 +241,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B04B5B7E2058532C00FBF999 /* ViewController.swift in Sources */,
+				B0E27AE52075223B0035EA19 /* AudioSampler.swift in Sources */,
+				B08FA2D92081A6E400700D93 /* DrumPadViewController+UICollectionView.swift in Sources */,
+				B0B3E3A42083EB3B00275C1E /* DrumPadCollectionViewFlowLayout.swift in Sources */,
+				B0813DFA2081AA9800979347 /* DrumPadViewModel.swift in Sources */,
+				B0E27AE120740AEE0035EA19 /* UIColor.swift in Sources */,
+				B04B5B7E2058532C00FBF999 /* DrumPadViewController.swift in Sources */,
+				B081CA062081C1BE00F7732A /* DrumPadCollectionViewCell.swift in Sources */,
 				B04B5B7C2058532C00FBF999 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -296,7 +324,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -349,7 +377,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";

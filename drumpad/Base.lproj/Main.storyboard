@@ -1,113 +1,70 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina4_7" orientation="portrait">
+    <device id="ipad9_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
-        <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Drum Pad View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="drumpad" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="DrumPadViewController" customModule="drumpad" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="ebI-Yt-Wcc">
-                                <rect key="frame" x="16" y="148" width="343" height="503"/>
-                                <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="a82-xN-meZ">
-                                        <rect key="frame" x="0.0" y="0.0" width="343" height="163.5"/>
-                                        <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H6Y-fL-e71">
-                                                <rect key="frame" x="0.0" y="0.0" width="168.5" height="163.5"/>
-                                                <color key="backgroundColor" red="0.97911241319444442" green="0.73044162326388884" blue="0.089057074652777776" alpha="1" colorSpace="calibratedRGB"/>
-                                                <connections>
-                                                    <action selector="padTappedWithButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="K8u-NS-XMf"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UNQ-5J-xc9">
-                                                <rect key="frame" x="174.5" y="0.0" width="168.5" height="163.5"/>
-                                                <color key="backgroundColor" red="0.97911241319444442" green="0.73044162326388884" blue="0.089057074652777776" alpha="1" colorSpace="calibratedRGB"/>
-                                                <connections>
-                                                    <action selector="padTappedWithButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5lc-Qt-nGB"/>
-                                                </connections>
-                                            </button>
-                                        </subviews>
-                                        <constraints>
-                                            <constraint firstItem="UNQ-5J-xc9" firstAttribute="firstBaseline" secondItem="H6Y-fL-e71" secondAttribute="firstBaseline" id="Uzc-BC-rkI"/>
-                                            <constraint firstItem="H6Y-fL-e71" firstAttribute="baseline" secondItem="UNQ-5J-xc9" secondAttribute="baseline" id="qwK-nw-RT3"/>
-                                        </constraints>
-                                    </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="3AX-Gi-yvy">
-                                        <rect key="frame" x="0.0" y="169.5" width="343" height="164"/>
-                                        <subviews>
-                                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EaW-V8-Uu4">
-                                                <rect key="frame" x="0.0" y="0.0" width="168.5" height="164"/>
-                                                <color key="backgroundColor" red="0.97911241319999998" green="0.73044162329999995" blue="0.089057074649999998" alpha="1" colorSpace="calibratedRGB"/>
-                                            </button>
-                                            <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mqG-Xa-isy">
-                                                <rect key="frame" x="174.5" y="0.0" width="168.5" height="164"/>
-                                                <color key="backgroundColor" red="0.97911241319999998" green="0.73044162329999995" blue="0.089057074649999998" alpha="1" colorSpace="calibratedRGB"/>
-                                            </button>
-                                        </subviews>
-                                        <constraints>
-                                            <constraint firstItem="EaW-V8-Uu4" firstAttribute="firstBaseline" secondItem="mqG-Xa-isy" secondAttribute="firstBaseline" id="91z-Tm-Qhx"/>
-                                            <constraint firstItem="mqG-Xa-isy" firstAttribute="baseline" secondItem="EaW-V8-Uu4" secondAttribute="baseline" id="Chv-aP-tVd"/>
-                                            <constraint firstItem="EaW-V8-Uu4" firstAttribute="firstBaseline" secondItem="mqG-Xa-isy" secondAttribute="firstBaseline" id="XBM-qU-D8x"/>
-                                            <constraint firstItem="mqG-Xa-isy" firstAttribute="baseline" secondItem="EaW-V8-Uu4" secondAttribute="baseline" id="asg-z8-0DR"/>
-                                        </constraints>
-                                    </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="ATa-MN-Lwf">
-                                        <rect key="frame" x="0.0" y="339.5" width="343" height="163.5"/>
-                                        <subviews>
-                                            <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f6e-Sz-7Az">
-                                                <rect key="frame" x="0.0" y="0.0" width="168.5" height="163.5"/>
-                                                <color key="backgroundColor" red="0.97911241319999998" green="0.73044162329999995" blue="0.089057074649999998" alpha="1" colorSpace="calibratedRGB"/>
-                                            </button>
-                                            <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SYu-w3-N50">
-                                                <rect key="frame" x="174.5" y="0.0" width="168.5" height="163.5"/>
-                                                <color key="backgroundColor" red="0.97911241319999998" green="0.73044162329999995" blue="0.089057074649999998" alpha="1" colorSpace="calibratedRGB"/>
-                                            </button>
-                                        </subviews>
-                                        <constraints>
-                                            <constraint firstItem="f6e-Sz-7Az" firstAttribute="baseline" secondItem="SYu-w3-N50" secondAttribute="baseline" id="Bsj-jw-4uj"/>
-                                            <constraint firstItem="f6e-Sz-7Az" firstAttribute="firstBaseline" secondItem="SYu-w3-N50" secondAttribute="firstBaseline" id="Ckb-jO-BcE"/>
-                                            <constraint firstItem="SYu-w3-N50" firstAttribute="baseline" secondItem="f6e-Sz-7Az" secondAttribute="baseline" id="CyK-Io-T5r"/>
-                                            <constraint firstItem="SYu-w3-N50" firstAttribute="firstBaseline" secondItem="f6e-Sz-7Az" secondAttribute="firstBaseline" id="jnt-1K-4Y4"/>
-                                        </constraints>
-                                    </stackView>
-                                </subviews>
-                            </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap to Play" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HT8-I0-36t">
-                                <rect key="frame" x="93" y="60" width="188" height="48"/>
+                                <rect key="frame" x="290" y="60" width="188" height="43"/>
                                 <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="36"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="igH-qO-xPA">
+                                <rect key="frame" x="16" y="143" width="736" height="865"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Svx-mK-DCc" customClass="DrumPadCollectionViewFlowLayout" customModule="drumpad" customModuleProvider="target">
+                                    <size key="itemSize" width="0.0" height="0.0"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="DrumPadCell" id="whd-To-r4D" customClass="DrumPadCollectionViewCell" customModule="drumpad" customModuleProvider="target">
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </view>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="5rA-kD-WuY"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="ez0-Ec-HDW"/>
+                                </connections>
+                            </collectionView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="ebI-Yt-Wcc" secondAttribute="bottom" constant="16" id="1e3-pL-n97"/>
-                            <constraint firstItem="ebI-Yt-Wcc" firstAttribute="top" secondItem="HT8-I0-36t" secondAttribute="bottom" constant="40" id="7Ca-jV-UAU"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="igH-qO-xPA" secondAttribute="trailing" constant="16" id="6s3-5J-gry"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="igH-qO-xPA" secondAttribute="bottom" constant="16" id="AWs-g2-fgI"/>
                             <constraint firstItem="HT8-I0-36t" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="40" id="WYW-cX-kAh"/>
-                            <constraint firstItem="ebI-Yt-Wcc" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="Xmz-gq-DUC"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ebI-Yt-Wcc" secondAttribute="trailing" constant="16" id="b9Z-VI-T2h"/>
+                            <constraint firstItem="igH-qO-xPA" firstAttribute="top" secondItem="HT8-I0-36t" secondAttribute="bottom" constant="40" id="Z4Q-jS-6Ht"/>
+                            <constraint firstItem="igH-qO-xPA" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="ZUB-gE-0mp"/>
                             <constraint firstItem="HT8-I0-36t" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="blK-Fg-3mz"/>
-                            <constraint firstItem="ebI-Yt-Wcc" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="128" id="g4f-oY-jvx"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="drumPadCollectionView" destination="igH-qO-xPA" id="dO7-5A-gAl"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="136.80000000000001" y="133.5832083958021"/>
+            <point key="canvasLocation" x="136.71875" y="133.0078125"/>
         </scene>
     </scenes>
 </document>
