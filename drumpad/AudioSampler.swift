@@ -10,7 +10,7 @@ import Foundation
 import AudioKit
 
 class AudioSampler {
-    var samples = ["kick.wav", "Two", "Three", "Four", "Five", "Six", "Seven", "Eight", "Nine", "Ten", "Eleven", "Twelve", "Thirteen", "Fourteen", "Fifteen", "Sixteen"]
+    var samples = ["kick.wav", "hi_hat.wav", "open_hat.wav", "clap.wav", "snare_1.wav", "snare_2.wav", "808_g.wav", "808_e.wav", "bamboo.wav", "shuffle.wav", "tambourine.wav", "rhodes_sample.wav", "guitar_sample_1.wav", "guitar_sample_2.wav", "guitar_sample_3.wav", "guitar_sample_4.wav"]
     
     func playSample(at index: Int) {
         guard let audioFile = try? AKAudioFile(readFileName: samples[index]) else { print("File Error."); return }
@@ -24,7 +24,7 @@ class AudioSampler {
 
         do {
             try AudioKit.start()
-            player.play()
+            (player.isPlaying) ? player.stop() : player.play()
         } catch let error {
             print("ERROR: \(error)")
         }
