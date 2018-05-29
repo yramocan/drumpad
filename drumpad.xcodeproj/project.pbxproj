@@ -15,11 +15,12 @@
 		B04B5B862058532C00FBF999 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B04B5B842058532C00FBF999 /* LaunchScreen.storyboard */; };
 		B0813DFA2081AA9800979347 /* DrumPadViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0813DF92081AA9700979347 /* DrumPadViewModel.swift */; };
 		B081CA062081C1BE00F7732A /* DrumPadCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B081CA042081C1BE00F7732A /* DrumPadCollectionViewCell.swift */; };
-		B08FA2D92081A6E400700D93 /* DrumPadViewController+UICollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B08FA2D82081A6E400700D93 /* DrumPadViewController+UICollectionView.swift */; };
+		B089CE902087F03A00F1B6A7 /* DrumPadCollectionViewCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B089CE8F2087F03A00F1B6A7 /* DrumPadCollectionViewCellViewModel.swift */; };
 		B0B3E3A22083E73800275C1E /* kick.wav in Resources */ = {isa = PBXBuildFile; fileRef = B0B3E3A12083E73800275C1E /* kick.wav */; };
 		B0B3E3A42083EB3B00275C1E /* DrumPadCollectionViewFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0B3E3A32083EB3B00275C1E /* DrumPadCollectionViewFlowLayout.swift */; };
 		B0E27AE120740AEE0035EA19 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0E27AE020740AEE0035EA19 /* UIColor.swift */; };
 		B0E27AE52075223B0035EA19 /* AudioSampler.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0E27AE42075223B0035EA19 /* AudioSampler.swift */; };
+		B0E60CEB20BC818F003D37D9 /* DrumPadCollectionViewCellViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0E60CEA20BC818F003D37D9 /* DrumPadCollectionViewCellViewController.swift */; };
 		B0EFF97F20850939000293B6 /* hi_hat.wav in Resources */ = {isa = PBXBuildFile; fileRef = B0EFF97D20850939000293B6 /* hi_hat.wav */; };
 		B0EFF98020850939000293B6 /* open_hat.wav in Resources */ = {isa = PBXBuildFile; fileRef = B0EFF97E20850939000293B6 /* open_hat.wav */; };
 		B0EFF98520850974000293B6 /* bamboo.wav in Resources */ = {isa = PBXBuildFile; fileRef = B0EFF98220850974000293B6 /* bamboo.wav */; };
@@ -48,11 +49,12 @@
 		B04B5B872058532C00FBF999 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B0813DF92081AA9700979347 /* DrumPadViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrumPadViewModel.swift; sourceTree = "<group>"; };
 		B081CA042081C1BE00F7732A /* DrumPadCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrumPadCollectionViewCell.swift; sourceTree = "<group>"; };
-		B08FA2D82081A6E400700D93 /* DrumPadViewController+UICollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DrumPadViewController+UICollectionView.swift"; sourceTree = "<group>"; };
+		B089CE8F2087F03A00F1B6A7 /* DrumPadCollectionViewCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrumPadCollectionViewCellViewModel.swift; sourceTree = "<group>"; };
 		B0B3E3A12083E73800275C1E /* kick.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = kick.wav; sourceTree = "<group>"; };
 		B0B3E3A32083EB3B00275C1E /* DrumPadCollectionViewFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrumPadCollectionViewFlowLayout.swift; sourceTree = "<group>"; };
 		B0E27AE020740AEE0035EA19 /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
 		B0E27AE42075223B0035EA19 /* AudioSampler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioSampler.swift; sourceTree = "<group>"; };
+		B0E60CEA20BC818F003D37D9 /* DrumPadCollectionViewCellViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrumPadCollectionViewCellViewController.swift; sourceTree = "<group>"; };
 		B0EFF97D20850939000293B6 /* hi_hat.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = hi_hat.wav; sourceTree = "<group>"; };
 		B0EFF97E20850939000293B6 /* open_hat.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = open_hat.wav; sourceTree = "<group>"; };
 		B0EFF98220850974000293B6 /* bamboo.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = bamboo.wav; sourceTree = "<group>"; };
@@ -116,11 +118,12 @@
 				B0EFF9812085094B000293B6 /* Samples */,
 				B04B5B7B2058532C00FBF999 /* AppDelegate.swift */,
 				B0E27AE42075223B0035EA19 /* AudioSampler.swift */,
-				B0813DF92081AA9700979347 /* DrumPadViewModel.swift */,
 				B04B5B7D2058532C00FBF999 /* DrumPadViewController.swift */,
-				B08FA2D82081A6E400700D93 /* DrumPadViewController+UICollectionView.swift */,
+				B0E60CEA20BC818F003D37D9 /* DrumPadCollectionViewCellViewController.swift */,
+				B0813DF92081AA9700979347 /* DrumPadViewModel.swift */,
 				B0B3E3A32083EB3B00275C1E /* DrumPadCollectionViewFlowLayout.swift */,
 				B081CA042081C1BE00F7732A /* DrumPadCollectionViewCell.swift */,
+				B089CE8F2087F03A00F1B6A7 /* DrumPadCollectionViewCellViewModel.swift */,
 				B0E27AE020740AEE0035EA19 /* UIColor.swift */,
 				B04B5B7F2058532C00FBF999 /* Main.storyboard */,
 				B04B5B822058532C00FBF999 /* Assets.xcassets */,
@@ -310,10 +313,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				B0E27AE52075223B0035EA19 /* AudioSampler.swift in Sources */,
-				B08FA2D92081A6E400700D93 /* DrumPadViewController+UICollectionView.swift in Sources */,
 				B0B3E3A42083EB3B00275C1E /* DrumPadCollectionViewFlowLayout.swift in Sources */,
 				B0813DFA2081AA9800979347 /* DrumPadViewModel.swift in Sources */,
+				B0E60CEB20BC818F003D37D9 /* DrumPadCollectionViewCellViewController.swift in Sources */,
 				B0E27AE120740AEE0035EA19 /* UIColor.swift in Sources */,
+				B089CE902087F03A00F1B6A7 /* DrumPadCollectionViewCellViewModel.swift in Sources */,
 				B04B5B7E2058532C00FBF999 /* DrumPadViewController.swift in Sources */,
 				B081CA062081C1BE00F7732A /* DrumPadCollectionViewCell.swift in Sources */,
 				B04B5B7C2058532C00FBF999 /* AppDelegate.swift in Sources */,

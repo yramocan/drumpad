@@ -9,10 +9,6 @@
 import UIKit
 
 class DrumPadViewModel {
-    var kNumberOfDrumPads = 16
+    let numberOfDrumPads = 16
     let sampler = AudioSampler()
-    
-    func playAudioFromSampler(withIndex index: Int) {
-        sampler.playSample(at: index)
-    }
 }
