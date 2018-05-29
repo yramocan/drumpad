@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AudioKit
 
 class DrumPadViewController: UIViewController {
     @IBOutlet weak var drumPadCollectionView: UICollectionView!
@@ -19,14 +20,39 @@ class DrumPadViewController: UIViewController {
     }
 
     func setUpCollectionView() {
+        drumPadCollectionView.collectionViewLayout = DrumPadCollectionViewFlowLayout()
         drumPadCollectionView.delaysContentTouches = false
         drumPadCollectionView.allowsMultipleSelection = true
         drumPadCollectionView.dataSource = self
-        drumPadCollectionView.collectionViewLayout = DrumPadCollectionViewFlowLayout.init()
     }
     
-    func triggerSample(with indexPath: IndexPath) {
-        viewModel.playAudioFromSampler(withIndex: indexPath.row)
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "cellOptionsSegue" {
+            guard let destinationVC = segue.destination as? DrumPadCollectionViewCellViewController else { return }
+            guard let cell = sender as? DrumPadCollectionViewCell else { return }
+            
+            destinationVC.cell = cell
+        }
     }
 }
 
+extension DrumPadViewController: UICollectionViewDataSource {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return viewModel.numberOfDrumPads
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = drumPadCollectionView.dequeueReusableCell(withReuseIdentifier: "DrumPadCell", for: indexPath) as! DrumPadCollectionViewCell
+        cell.delegate = self
+        cell.tag = indexPath.row
+        cell.viewModel.sampler = viewModel.sampler
+        
+        return cell
+    }
+}
+
+extension DrumPadViewController: DrumPadCollectionViewCellDelegate {
+    func presentCellOptionsView(_ cell: DrumPadCollectionViewCell) {
+        self.performSegue(withIdentifier: "cellOptionsSegue", sender: cell)
+    }
+}
