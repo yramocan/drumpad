@@ -15,7 +15,7 @@ class DrumPadCollectionViewFlowLayout: UICollectionViewFlowLayout {
     override var itemSize: CGSize {
         set {}
         get {
-            // TODO: Figure this shit out.
+            // TODO: Figure this out.
             guard let collectionView = self.collectionView else { return CGSize(width: 175, height: 175) }
             let itemWidth = (collectionView.frame.width - ((kNumberOfColumns * kGutterSpacing) - kGutterSpacing)) / kNumberOfColumns
             return CGSize(width: itemWidth, height: itemWidth)

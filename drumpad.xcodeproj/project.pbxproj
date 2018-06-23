@@ -8,19 +8,20 @@
 
 /* Begin PBXBuildFile section */
 		36BFFD01524845461638D909 /* libPods-drumpad.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CEFE84DF7956519BAA27E3BE /* libPods-drumpad.a */; };
+		B0084F2C20DEED1500970103 /* DrumPadCellOptionsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0084F2B20DEED1500970103 /* DrumPadCellOptionsViewModel.swift */; };
 		B04B5B7C2058532C00FBF999 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B04B5B7B2058532C00FBF999 /* AppDelegate.swift */; };
 		B04B5B7E2058532C00FBF999 /* DrumPadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B04B5B7D2058532C00FBF999 /* DrumPadViewController.swift */; };
 		B04B5B812058532C00FBF999 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B04B5B7F2058532C00FBF999 /* Main.storyboard */; };
 		B04B5B832058532C00FBF999 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B04B5B822058532C00FBF999 /* Assets.xcassets */; };
 		B04B5B862058532C00FBF999 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B04B5B842058532C00FBF999 /* LaunchScreen.storyboard */; };
+		B067EB2520DC6DA3003AD89E /* DrumPadCellOptionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B067EB2420DC6DA3003AD89E /* DrumPadCellOptionsViewController.swift */; };
 		B0813DFA2081AA9800979347 /* DrumPadViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0813DF92081AA9700979347 /* DrumPadViewModel.swift */; };
-		B081CA062081C1BE00F7732A /* DrumPadCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B081CA042081C1BE00F7732A /* DrumPadCollectionViewCell.swift */; };
-		B089CE902087F03A00F1B6A7 /* DrumPadCollectionViewCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B089CE8F2087F03A00F1B6A7 /* DrumPadCollectionViewCellViewModel.swift */; };
+		B081CA062081C1BE00F7732A /* DrumPadCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B081CA042081C1BE00F7732A /* DrumPadCell.swift */; };
+		B089CE902087F03A00F1B6A7 /* DrumPadCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B089CE8F2087F03A00F1B6A7 /* DrumPadCellViewModel.swift */; };
 		B0B3E3A22083E73800275C1E /* kick.wav in Resources */ = {isa = PBXBuildFile; fileRef = B0B3E3A12083E73800275C1E /* kick.wav */; };
 		B0B3E3A42083EB3B00275C1E /* DrumPadCollectionViewFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0B3E3A32083EB3B00275C1E /* DrumPadCollectionViewFlowLayout.swift */; };
 		B0E27AE120740AEE0035EA19 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0E27AE020740AEE0035EA19 /* UIColor.swift */; };
 		B0E27AE52075223B0035EA19 /* AudioSampler.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0E27AE42075223B0035EA19 /* AudioSampler.swift */; };
-		B0E60CEB20BC818F003D37D9 /* DrumPadCollectionViewCellViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0E60CEA20BC818F003D37D9 /* DrumPadCollectionViewCellViewController.swift */; };
 		B0EFF97F20850939000293B6 /* hi_hat.wav in Resources */ = {isa = PBXBuildFile; fileRef = B0EFF97D20850939000293B6 /* hi_hat.wav */; };
 		B0EFF98020850939000293B6 /* open_hat.wav in Resources */ = {isa = PBXBuildFile; fileRef = B0EFF97E20850939000293B6 /* open_hat.wav */; };
 		B0EFF98520850974000293B6 /* bamboo.wav in Resources */ = {isa = PBXBuildFile; fileRef = B0EFF98220850974000293B6 /* bamboo.wav */; };
@@ -40,6 +41,7 @@
 
 /* Begin PBXFileReference section */
 		391380ABF586372BA59AAE89 /* Pods-drumpad.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-drumpad.release.xcconfig"; path = "Pods/Target Support Files/Pods-drumpad/Pods-drumpad.release.xcconfig"; sourceTree = "<group>"; };
+		B0084F2B20DEED1500970103 /* DrumPadCellOptionsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrumPadCellOptionsViewModel.swift; sourceTree = "<group>"; };
 		B04B5B782058532C00FBF999 /* drumpad.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = drumpad.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B04B5B7B2058532C00FBF999 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B04B5B7D2058532C00FBF999 /* DrumPadViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrumPadViewController.swift; sourceTree = "<group>"; };
@@ -47,14 +49,14 @@
 		B04B5B822058532C00FBF999 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B04B5B852058532C00FBF999 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B04B5B872058532C00FBF999 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B067EB2420DC6DA3003AD89E /* DrumPadCellOptionsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DrumPadCellOptionsViewController.swift; sourceTree = "<group>"; };
 		B0813DF92081AA9700979347 /* DrumPadViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrumPadViewModel.swift; sourceTree = "<group>"; };
-		B081CA042081C1BE00F7732A /* DrumPadCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrumPadCollectionViewCell.swift; sourceTree = "<group>"; };
-		B089CE8F2087F03A00F1B6A7 /* DrumPadCollectionViewCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrumPadCollectionViewCellViewModel.swift; sourceTree = "<group>"; };
+		B081CA042081C1BE00F7732A /* DrumPadCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrumPadCell.swift; sourceTree = "<group>"; };
+		B089CE8F2087F03A00F1B6A7 /* DrumPadCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrumPadCellViewModel.swift; sourceTree = "<group>"; };
 		B0B3E3A12083E73800275C1E /* kick.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = kick.wav; sourceTree = "<group>"; };
 		B0B3E3A32083EB3B00275C1E /* DrumPadCollectionViewFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrumPadCollectionViewFlowLayout.swift; sourceTree = "<group>"; };
 		B0E27AE020740AEE0035EA19 /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
 		B0E27AE42075223B0035EA19 /* AudioSampler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioSampler.swift; sourceTree = "<group>"; };
-		B0E60CEA20BC818F003D37D9 /* DrumPadCollectionViewCellViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrumPadCollectionViewCellViewController.swift; sourceTree = "<group>"; };
 		B0EFF97D20850939000293B6 /* hi_hat.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = hi_hat.wav; sourceTree = "<group>"; };
 		B0EFF97E20850939000293B6 /* open_hat.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = open_hat.wav; sourceTree = "<group>"; };
 		B0EFF98220850974000293B6 /* bamboo.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = bamboo.wav; sourceTree = "<group>"; };
@@ -94,6 +96,26 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		B0084F2D20DEED7900970103 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				B04B5B7D2058532C00FBF999 /* DrumPadViewController.swift */,
+				B081CA042081C1BE00F7732A /* DrumPadCell.swift */,
+				B067EB2420DC6DA3003AD89E /* DrumPadCellOptionsViewController.swift */,
+			);
+			name = "View Controllers";
+			sourceTree = "<group>";
+		};
+		B0084F2E20DEED9B00970103 /* View Models */ = {
+			isa = PBXGroup;
+			children = (
+				B0813DF92081AA9700979347 /* DrumPadViewModel.swift */,
+				B089CE8F2087F03A00F1B6A7 /* DrumPadCellViewModel.swift */,
+				B0084F2B20DEED1500970103 /* DrumPadCellOptionsViewModel.swift */,
+			);
+			name = "View Models";
+			sourceTree = "<group>";
+		};
 		B04B5B6F2058532C00FBF999 = {
 			isa = PBXGroup;
 			children = (
@@ -115,25 +137,38 @@
 		B04B5B7A2058532C00FBF999 /* drumpad */ = {
 			isa = PBXGroup;
 			children = (
-				B0EFF9812085094B000293B6 /* Samples */,
 				B04B5B7B2058532C00FBF999 /* AppDelegate.swift */,
 				B0E27AE42075223B0035EA19 /* AudioSampler.swift */,
-				B04B5B7D2058532C00FBF999 /* DrumPadViewController.swift */,
-				B0E60CEA20BC818F003D37D9 /* DrumPadCollectionViewCellViewController.swift */,
-				B0813DF92081AA9700979347 /* DrumPadViewModel.swift */,
 				B0B3E3A32083EB3B00275C1E /* DrumPadCollectionViewFlowLayout.swift */,
-				B081CA042081C1BE00F7732A /* DrumPadCollectionViewCell.swift */,
-				B089CE8F2087F03A00F1B6A7 /* DrumPadCollectionViewCellViewModel.swift */,
 				B0E27AE020740AEE0035EA19 /* UIColor.swift */,
-				B04B5B7F2058532C00FBF999 /* Main.storyboard */,
-				B04B5B822058532C00FBF999 /* Assets.xcassets */,
-				B04B5B842058532C00FBF999 /* LaunchScreen.storyboard */,
-				B04B5B872058532C00FBF999 /* Info.plist */,
+				B0AE1AED20DEEE1300B1C65B /* Resources */,
+				B0AE1AEF20DEEE8C00B1C65B /* Samples */,
+				B0AE1AEE20DEEE1B00B1C65B /* Storyboards */,
+				B0084F2D20DEED7900970103 /* View Controllers */,
+				B0084F2E20DEED9B00970103 /* View Models */,
 			);
 			path = drumpad;
 			sourceTree = "<group>";
 		};
-		B0EFF9812085094B000293B6 /* Samples */ = {
+		B0AE1AED20DEEE1300B1C65B /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				B04B5B822058532C00FBF999 /* Assets.xcassets */,
+				B04B5B872058532C00FBF999 /* Info.plist */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		B0AE1AEE20DEEE1B00B1C65B /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				B04B5B842058532C00FBF999 /* LaunchScreen.storyboard */,
+				B04B5B7F2058532C00FBF999 /* Main.storyboard */,
+			);
+			name = Storyboards;
+			sourceTree = "<group>";
+		};
+		B0AE1AEF20DEEE8C00B1C65B /* Samples */ = {
 			isa = PBXGroup;
 			children = (
 				B0EFF99920850B0A000293B6 /* 808_g.wav */,
@@ -153,7 +188,7 @@
 				B0EFF98F20850A58000293B6 /* guitar_sample_3.wav */,
 				B0EFF98E20850A58000293B6 /* guitar_sample_4.wav */,
 			);
-			name = Samples;
+			path = Samples;
 			sourceTree = "<group>";
 		};
 		FBF9E25C28BDE7F37ED558D7 /* Pods */ = {
@@ -315,11 +350,12 @@
 				B0E27AE52075223B0035EA19 /* AudioSampler.swift in Sources */,
 				B0B3E3A42083EB3B00275C1E /* DrumPadCollectionViewFlowLayout.swift in Sources */,
 				B0813DFA2081AA9800979347 /* DrumPadViewModel.swift in Sources */,
-				B0E60CEB20BC818F003D37D9 /* DrumPadCollectionViewCellViewController.swift in Sources */,
+				B0084F2C20DEED1500970103 /* DrumPadCellOptionsViewModel.swift in Sources */,
 				B0E27AE120740AEE0035EA19 /* UIColor.swift in Sources */,
-				B089CE902087F03A00F1B6A7 /* DrumPadCollectionViewCellViewModel.swift in Sources */,
+				B067EB2520DC6DA3003AD89E /* DrumPadCellOptionsViewController.swift in Sources */,
+				B089CE902087F03A00F1B6A7 /* DrumPadCellViewModel.swift in Sources */,
 				B04B5B7E2058532C00FBF999 /* DrumPadViewController.swift in Sources */,
-				B081CA062081C1BE00F7732A /* DrumPadCollectionViewCell.swift in Sources */,
+				B081CA062081C1BE00F7732A /* DrumPadCell.swift in Sources */,
 				B04B5B7C2058532C00FBF999 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

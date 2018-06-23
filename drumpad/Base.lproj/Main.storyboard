@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="AKz-MS-W5g">
-    <device id="ipad9_7" orientation="portrait">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="AKz-MS-W5g">
+    <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -15,17 +15,17 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="DrumPadViewController" customModule="drumpad" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap to Play" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HT8-I0-36t">
-                                <rect key="frame" x="290" y="104" width="188" height="43"/>
+                                <rect key="frame" x="93.5" y="104" width="188" height="43"/>
                                 <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="36"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="igH-qO-xPA">
-                                <rect key="frame" x="16" y="187" width="736" height="821"/>
+                                <rect key="frame" x="16" y="187" width="343" height="464"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Svx-mK-DCc" customClass="DrumPadCollectionViewFlowLayout" customModule="drumpad" customModuleProvider="target">
                                     <size key="itemSize" width="0.0" height="0.0"/>
@@ -34,7 +34,7 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="DrumPadCell" id="whd-To-r4D" customClass="DrumPadCollectionViewCell" customModule="drumpad" customModuleProvider="target">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="DrumPadCell" id="whd-To-r4D" customClass="DrumPadCell" customModule="drumpad" customModuleProvider="target">
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
                                             <autoresizingMask key="autoresizingMask"/>
@@ -64,22 +64,22 @@
             </objects>
             <point key="canvasLocation" x="902.34375" y="133.0078125"/>
         </scene>
-        <!--Drum Pad Collection View Cell View Controller-->
+        <!--Drum Pad Cell Options View Controller-->
         <scene sceneID="aos-Rq-oTE">
             <objects>
-                <viewController id="Qyh-4m-OD9" customClass="DrumPadCollectionViewCellViewController" customModule="drumpad" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Qyh-4m-OD9" customClass="DrumPadCellOptionsViewController" customModule="drumpad" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Wcq-gA-U3x">
-                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cell Volume" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dni-wa-gRx">
-                                <rect key="frame" x="338.5" y="502" width="91" height="21"/>
+                                <rect key="frame" x="142" y="323" width="91" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="n6B-sM-CSQ">
-                                <rect key="frame" x="126" y="565" width="516" height="31"/>
+                                <rect key="frame" x="126" y="386" width="123" height="31"/>
                                 <connections>
                                     <action selector="volumeSliderChanged:" destination="Qyh-4m-OD9" eventType="valueChanged" id="J7Y-Mh-LO9"/>
                                 </connections>
@@ -96,7 +96,7 @@
                         <viewLayoutGuide key="safeArea" id="Cxu-7E-YuW"/>
                     </view>
                     <connections>
-                        <outlet property="optionsLabel" destination="Dni-wa-gRx" id="vHc-SG-W2l"/>
+                        <outlet property="volumeLabel" destination="Dni-wa-gRx" id="vHc-SG-W2l"/>
                         <outlet property="volumeSlider" destination="n6B-sM-CSQ" id="yHf-fc-jKi"/>
                     </connections>
                 </viewController>
@@ -110,7 +110,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="AKz-MS-W5g" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="4V4-6g-JfE">
-                        <rect key="frame" x="0.0" y="20" width="768" height="44"/>
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
