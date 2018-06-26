@@ -6,16 +6,19 @@
 //  Copyright © 2018 Yuri Ramocan. All rights reserved.
 //
 
+import AudioKit
 import UIKit
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
-
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+
+        setUpAudioKitSession()
+
         return true
     }
 
@@ -41,6 +44,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
 
-
+    // MARK: - Setup Methods
+    fileprivate func setUpAudioKitSession() {
+        AKSettings.bufferLength = .medium
+        
+        do {
+            try AKSettings.setSession(category: .playAndRecord, with: .allowBluetoothA2DP)
+        } catch {
+            AKLog("Could not set session category.")
+        }
+        
+        AKSettings.defaultToSpeaker = true
+    }
 }
 

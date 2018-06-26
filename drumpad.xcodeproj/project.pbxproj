@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		36BFFD01524845461638D909 /* libPods-drumpad.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CEFE84DF7956519BAA27E3BE /* libPods-drumpad.a */; };
 		B0084F2C20DEED1500970103 /* DrumPadCellOptionsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0084F2B20DEED1500970103 /* DrumPadCellOptionsViewModel.swift */; };
+		B00F49AA20E2166F00EDFA03 /* AudioSampleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00F49A920E2166F00EDFA03 /* AudioSampleTableViewCell.swift */; };
 		B04B5B7C2058532C00FBF999 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B04B5B7B2058532C00FBF999 /* AppDelegate.swift */; };
 		B04B5B7E2058532C00FBF999 /* DrumPadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B04B5B7D2058532C00FBF999 /* DrumPadViewController.swift */; };
 		B04B5B812058532C00FBF999 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B04B5B7F2058532C00FBF999 /* Main.storyboard */; };
@@ -42,6 +43,7 @@
 /* Begin PBXFileReference section */
 		391380ABF586372BA59AAE89 /* Pods-drumpad.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-drumpad.release.xcconfig"; path = "Pods/Target Support Files/Pods-drumpad/Pods-drumpad.release.xcconfig"; sourceTree = "<group>"; };
 		B0084F2B20DEED1500970103 /* DrumPadCellOptionsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrumPadCellOptionsViewModel.swift; sourceTree = "<group>"; };
+		B00F49A920E2166F00EDFA03 /* AudioSampleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioSampleTableViewCell.swift; sourceTree = "<group>"; };
 		B04B5B782058532C00FBF999 /* drumpad.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = drumpad.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B04B5B7B2058532C00FBF999 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B04B5B7D2058532C00FBF999 /* DrumPadViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrumPadViewController.swift; sourceTree = "<group>"; };
@@ -139,6 +141,7 @@
 			children = (
 				B04B5B7B2058532C00FBF999 /* AppDelegate.swift */,
 				B0E27AE42075223B0035EA19 /* AudioSampler.swift */,
+				B00F49A920E2166F00EDFA03 /* AudioSampleTableViewCell.swift */,
 				B0B3E3A32083EB3B00275C1E /* DrumPadCollectionViewFlowLayout.swift */,
 				B0E27AE020740AEE0035EA19 /* UIColor.swift */,
 				B0AE1AED20DEEE1300B1C65B /* Resources */,
@@ -357,6 +360,7 @@
 				B04B5B7E2058532C00FBF999 /* DrumPadViewController.swift in Sources */,
 				B081CA062081C1BE00F7732A /* DrumPadCell.swift in Sources */,
 				B04B5B7C2058532C00FBF999 /* AppDelegate.swift in Sources */,
+				B00F49AA20E2166F00EDFA03 /* AudioSampleTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -501,6 +505,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = JFW9B39RP7;
 				INFOPLIST_FILE = drumpad/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.yuriramocan.drumpad;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -517,6 +522,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = JFW9B39RP7;
 				INFOPLIST_FILE = drumpad/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.yuriramocan.drumpad;
 				PRODUCT_NAME = "$(TARGET_NAME)";

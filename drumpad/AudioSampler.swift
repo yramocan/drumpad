@@ -12,13 +12,13 @@ import AudioKit
 final class AudioSampler {
     static let shared = AudioSampler()
     
-    private let samples = ["kick.wav", "hi_hat.wav", "open_hat.wav", "clap.wav", "snare_1.wav", "snare_2.wav", "808_g.wav", "808_e.wav", "bamboo.wav", "shuffle.wav", "tambourine.wav", "rhodes_sample.wav", "guitar_sample_1.wav", "guitar_sample_2.wav", "guitar_sample_3.wav", "guitar_sample_4.wav"]
+    static let samples = ["kick.wav", "hi_hat.wav", "open_hat.wav", "clap.wav", "snare_1.wav", "snare_2.wav", "808_g.wav", "808_e.wav", "bamboo.wav", "shuffle.wav", "tambourine.wav", "rhodes_sample.wav", "guitar_sample_1.wav", "guitar_sample_2.wav", "guitar_sample_3.wav", "guitar_sample_4.wav"]
     
     private var mixer: AKMixer?
     private var nodes = [AKNode]()
     
     func createPlayer(withIndex index: Int) {
-        guard let audioFile = try? AKAudioFile(readFileName: samples[index]) else {
+        guard let audioFile = try? AKAudioFile(readFileName: AudioSampler.samples[index]) else {
             print("File Error.")
             return
         }
@@ -42,6 +42,10 @@ final class AudioSampler {
         }
     }
     
+    func player(at index: Int) -> AKPlayer? {
+        return nodes[index] as? AKPlayer
+    }
+    
     func playSample(with index: Int) {
         guard let player = nodes[index] as? AKPlayer else { return }
         
@@ -51,6 +55,22 @@ final class AudioSampler {
         if player.isPlaying { player.pause() }
         player.play()
     }
+    
+    func resetSample(for index: Int) {
+        guard let audioFile = try? AKAudioFile(readFileName: AudioSampler.samples[index]) else {
+            print("File Error.")
+            return
+        }
+        
+        setSample(for: index, audioFile: audioFile)
+    }
+    
+    func setSample(for index: Int, audioFile: AKAudioFile) {
+        guard let player = nodes[index] as? AKPlayer else { return }
+        player.load(audioFile: audioFile)
+    }
+    
+    // MARK: - Volume Helpers
     
     func getVolume(forIndex index: Int) -> Double {
         guard let player = nodes[index] as? AKPlayer else { return -1 }

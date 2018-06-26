@@ -14,7 +14,16 @@ final class DrumPadCellOptionsViewModel {
     
     var cellIndex: Int?
     
-    func didLoadCellOptions(with index: Int, completion: (_ volume: Double) -> Void) {
+    var isRecording = false
+    
+    var filename: String? {
+        guard let index = cellIndex,
+            let player = sampler.player(at: index) else { return nil }
+        return player.audioFile?.fileName
+    }
+    
+    func didLoadCellOptions(completion: (_ volume: Double) -> Void) {
+        guard let index = cellIndex else { return }
         let playerVolume = sampler.getVolume(forIndex: index)
         completion(playerVolume)
     }
@@ -22,5 +31,18 @@ final class DrumPadCellOptionsViewModel {
     func didChangeVolumeSlider(_ volume: Double) {
         guard let index = cellIndex else { return }
         sampler.set(volume: volume, forIndex: index)
+    }
+    
+    func resetAudioSample() {
+        guard let index = cellIndex else { return }
+        sampler.resetSample(for: index)
+    }
+    
+    func startRecording() {
+        isRecording = true
+    }
+    
+    func stopRecording() {
+        isRecording = false
     }
 }
