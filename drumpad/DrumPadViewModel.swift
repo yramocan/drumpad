@@ -10,8 +10,12 @@ import AudioKit
 import Foundation
 
 final class DrumPadViewModel {
+    // TODO: Audio sampler node count
     let numberOfDrumPads = 16
+    
     let sampler = AudioSampler.shared
+    
+    // Move this stuff to AudioSampler
     
     func drumPadDidAppear() {
         sampler.configureAudioEngine()

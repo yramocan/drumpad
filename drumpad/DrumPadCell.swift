@@ -60,6 +60,11 @@ class DrumPadCell: UICollectionViewCell {
         super.touchesBegan(touches, with: event)
         
         state = .padActive
+        
+        // Haptic feedback
+        
+        // Delegate to DrumPadViewController to remove
+        // this cell's viewModel
         viewModel.playSample(with: self.tag)
     }
     

@@ -14,12 +14,17 @@ final class DrumPadCellOptionsViewModel {
     
     var cellIndex: Int?
     
-    var isRecording = false
-    
     var filename: String? {
         guard let index = cellIndex,
-            let player = sampler.player(at: index) else { return nil }
-        return player.audioFile?.fileName
+              let player = sampler.player(at: index),
+              let name = player.audioFile?.fileName,
+              let ext = player.audioFile?.fileExt else { return nil }
+        
+        return "\(name).\(ext)"
+    }
+    
+    var isRecording: Bool {
+        return sampler.recorder.isRecording
     }
     
     func didLoadCellOptions(completion: (_ volume: Double) -> Void) {
@@ -39,10 +44,37 @@ final class DrumPadCellOptionsViewModel {
     }
     
     func startRecording() {
-        isRecording = true
+        guard !isRecording else {
+            stopRecording()
+            return
+        }
+        
+        do {
+            try sampler.recorder.reset()
+            try sampler.recorder.record()
+            
+        NotificationCenter.default.post(name: .didToggleRecording,
+                                        object: isRecording)
+            
+        } catch let error {
+            AKLog("Error: \(error.localizedDescription)")
+        }
     }
     
     func stopRecording() {
-        isRecording = false
+        guard isRecording else {
+            startRecording()
+            return
+        }
+        
+        sampler.recorder.stop()
+        
+        NotificationCenter.default.post(name: .didToggleRecording,
+                                        object: isRecording)
+        
+        guard let index = cellIndex,
+              let audioFile = sampler.recorder.audioFile else { return }
+        
+        sampler.setSample(for: index, audioFile: audioFile)
     }
 }

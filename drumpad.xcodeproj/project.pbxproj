@@ -15,6 +15,7 @@
 		B04B5B812058532C00FBF999 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B04B5B7F2058532C00FBF999 /* Main.storyboard */; };
 		B04B5B832058532C00FBF999 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B04B5B822058532C00FBF999 /* Assets.xcassets */; };
 		B04B5B862058532C00FBF999 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B04B5B842058532C00FBF999 /* LaunchScreen.storyboard */; };
+		B050032D20F3028B00700BF5 /* Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = B050032C20F3028B00700BF5 /* Notifications.swift */; };
 		B067EB2520DC6DA3003AD89E /* DrumPadCellOptionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B067EB2420DC6DA3003AD89E /* DrumPadCellOptionsViewController.swift */; };
 		B0813DFA2081AA9800979347 /* DrumPadViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0813DF92081AA9700979347 /* DrumPadViewModel.swift */; };
 		B081CA062081C1BE00F7732A /* DrumPadCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B081CA042081C1BE00F7732A /* DrumPadCell.swift */; };
@@ -51,6 +52,7 @@
 		B04B5B822058532C00FBF999 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B04B5B852058532C00FBF999 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B04B5B872058532C00FBF999 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B050032C20F3028B00700BF5 /* Notifications.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notifications.swift; sourceTree = "<group>"; };
 		B067EB2420DC6DA3003AD89E /* DrumPadCellOptionsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DrumPadCellOptionsViewController.swift; sourceTree = "<group>"; };
 		B0813DF92081AA9700979347 /* DrumPadViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrumPadViewModel.swift; sourceTree = "<group>"; };
 		B081CA042081C1BE00F7732A /* DrumPadCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrumPadCell.swift; sourceTree = "<group>"; };
@@ -143,6 +145,7 @@
 				B0E27AE42075223B0035EA19 /* AudioSampler.swift */,
 				B00F49A920E2166F00EDFA03 /* AudioSampleTableViewCell.swift */,
 				B0B3E3A32083EB3B00275C1E /* DrumPadCollectionViewFlowLayout.swift */,
+				B050032C20F3028B00700BF5 /* Notifications.swift */,
 				B0E27AE020740AEE0035EA19 /* UIColor.swift */,
 				B0AE1AED20DEEE1300B1C65B /* Resources */,
 				B0AE1AEF20DEEE8C00B1C65B /* Samples */,
@@ -350,6 +353,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B050032D20F3028B00700BF5 /* Notifications.swift in Sources */,
 				B0E27AE52075223B0035EA19 /* AudioSampler.swift in Sources */,
 				B0B3E3A42083EB3B00275C1E /* DrumPadCollectionViewFlowLayout.swift in Sources */,
 				B0813DFA2081AA9800979347 /* DrumPadViewModel.swift in Sources */,
@@ -503,11 +507,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = JFW9B39RP7;
+				DEVELOPMENT_TEAM = 2Z262HL3RX;
 				INFOPLIST_FILE = drumpad/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.yuriramocan.drumpad;
+				PRODUCT_BUNDLE_IDENTIFIER = com.yuriramocan.drumpad00000;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -520,11 +524,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = JFW9B39RP7;
+				DEVELOPMENT_TEAM = 2Z262HL3RX;
 				INFOPLIST_FILE = drumpad/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.yuriramocan.drumpad;
+				PRODUCT_BUNDLE_IDENTIFIER = com.yuriramocan.drumpad00000;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

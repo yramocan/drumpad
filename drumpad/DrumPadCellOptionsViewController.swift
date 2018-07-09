@@ -9,6 +9,7 @@
 import UIKit
 
 class DrumPadCellOptionsViewController: UIViewController {
+    @IBOutlet weak var recordButton: UIButton!
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var volumeValueLabel: UILabel!
     @IBOutlet weak var volumeSlider: UISlider!
@@ -18,8 +19,8 @@ class DrumPadCellOptionsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        tableView.delegate = self
-        tableView.dataSource = self
+        setUpObservers()
+        setUpTableView()
         
         viewModel.didLoadCellOptions() { [weak self] (volume) in
             self?.volumeSlider.value = Float(volume)
@@ -31,6 +32,30 @@ class DrumPadCellOptionsViewController: UIViewController {
         viewModel.cellIndex = index
     }
     
+    private func setUpObservers() {
+        NotificationCenter.default.addObserver(self,
+                                               selector: #selector(toggleRecordButton),
+                                               name: .didToggleRecording, object: nil)
+    }
+    
+    private func setUpTableView() {
+        tableView.delegate = self
+        tableView.dataSource = self
+        tableView.allowsMultipleSelection = false
+    }
+    
+    @objc private func toggleRecordButton(_ notification: Notification) {
+        guard let isRecording = notification.object as? Bool else { return }
+        
+        let buttonText = isRecording ? "Stop" : "Record"
+        recordButton.setTitle(buttonText, for: .normal)
+    }
+}
+
+// MARK: - Extensions
+
+// MARK: IBActions
+extension DrumPadCellOptionsViewController {
     @IBAction func volumeSliderChanged(_ sender: Any) {
         let volumeSliderValue = Double(volumeSlider.value)
         viewModel.didChangeVolumeSlider(volumeSliderValue)
@@ -38,8 +63,6 @@ class DrumPadCellOptionsViewController: UIViewController {
     }
     
     @IBAction func recordButtonTapped(_ sender: Any) {
-        print("Recording!")
-        
         if viewModel.isRecording {
             viewModel.stopRecording()
         } else {
@@ -54,6 +77,7 @@ class DrumPadCellOptionsViewController: UIViewController {
     }
 }
 
+// MARK: UITableViewDataSource
 extension DrumPadCellOptionsViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return AudioSampler.samples.count
@@ -64,14 +88,21 @@ extension DrumPadCellOptionsViewController: UITableViewDataSource {
         
         cell.sampleNameLabel.text = AudioSampler.samples[indexPath.row]
         
+        print("cell text: \(cell.sampleNameLabel.text!) | filename: \(viewModel.filename!)")
+        
         if cell.sampleNameLabel.text == viewModel.filename {
             cell.accessoryType = .checkmark
         }
         
         return cell
     }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return CGFloat(60)
+    }
 }
 
+// MARK: UITableViewDelegate
 extension DrumPadCellOptionsViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let cell = tableView.cellForRow(at: indexPath)

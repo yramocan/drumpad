@@ -45,7 +45,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
     // MARK: - Setup Methods
-    fileprivate func setUpAudioKitSession() {
+    private func setUpAudioKitSession() {
         AKSettings.bufferLength = .medium
         
         do {

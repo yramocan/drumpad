@@ -17,6 +17,11 @@ final class AudioSampler {
     private var mixer: AKMixer?
     private var nodes = [AKNode]()
     
+    let mic = AKMicrophone()
+    var tape = try! AKAudioFile()
+    
+    lazy var recorder = try! AKNodeRecorder(node: mic, file: tape)
+    
     func createPlayer(withIndex index: Int) {
         guard let audioFile = try? AKAudioFile(readFileName: AudioSampler.samples[index]) else {
             print("File Error.")
@@ -30,6 +35,8 @@ final class AudioSampler {
         
         nodes.append(player)
     }
+    
+    // TODO: Create 16 player nodes.
     
     func configureAudioEngine() {
         mixer = AKMixer(nodes)
@@ -54,6 +61,8 @@ final class AudioSampler {
         
         if player.isPlaying { player.pause() }
         player.play()
+        
+        // Delegate didStartSamplePlayback(at index: Int)
     }
     
     func resetSample(for index: Int) {

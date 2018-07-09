@@ -6,12 +6,9 @@
 //  Copyright © 2018 Yuri Ramocan. All rights reserved.
 //
 
-import AudioKit
 import Foundation
 
 final class DrumPadCellViewModel {
-    var volume: Double = 1.0
-    
     private let sampler = AudioSampler.shared
     
     func playSample(with index: Int) {
