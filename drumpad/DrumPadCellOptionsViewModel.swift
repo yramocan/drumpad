@@ -53,8 +53,7 @@ final class DrumPadCellOptionsViewModel {
             try sampler.recorder.reset()
             try sampler.recorder.record()
             
-        NotificationCenter.default.post(name: .didToggleRecording,
-                                        object: isRecording)
+            NotificationCenter.default.post(name: .didToggleRecording, object: isRecording)
             
         } catch let error {
             AKLog("Error: \(error.localizedDescription)")
@@ -69,8 +68,7 @@ final class DrumPadCellOptionsViewModel {
         
         sampler.recorder.stop()
         
-        NotificationCenter.default.post(name: .didToggleRecording,
-                                        object: isRecording)
+        NotificationCenter.default.post(name: .didToggleRecording, object: isRecording)
         
         guard let index = cellIndex,
               let audioFile = sampler.recorder.audioFile else { return }

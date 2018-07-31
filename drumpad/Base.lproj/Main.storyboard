@@ -6,7 +6,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -110,36 +109,6 @@
                                     <action selector="resetButtonTapped:" destination="Qyh-4m-OD9" eventType="touchUpInside" id="puV-Om-6Mw"/>
                                 </connections>
                             </button>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="M4N-3v-H2c">
-                                <rect key="frame" x="0.0" y="332" width="375" height="335"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="audioSampleCell" rowHeight="60" id="ns1-vC-fc1" customClass="AudioSampleTableViewCell" customModule="drumpad" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="60"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ns1-vC-fc1" id="tNf-iJ-opR">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="59.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sample name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="COx-Tf-u4E">
-                                                    <rect key="frame" x="15" y="19.5" width="104" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstItem="COx-Tf-u4E" firstAttribute="centerY" secondItem="tNf-iJ-opR" secondAttribute="centerY" id="hdc-rD-7Qh"/>
-                                                <constraint firstItem="COx-Tf-u4E" firstAttribute="leading" secondItem="tNf-iJ-opR" secondAttribute="leadingMargin" id="vn9-MB-tsc"/>
-                                            </constraints>
-                                        </tableViewCellContentView>
-                                        <connections>
-                                            <outlet property="contentView" destination="tNf-iJ-opR" id="48g-5k-Caz"/>
-                                            <outlet property="sampleNameLabel" destination="COx-Tf-u4E" id="bz9-lW-uRg"/>
-                                        </connections>
-                                    </tableViewCell>
-                                </prototypes>
-                            </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -148,14 +117,10 @@
                             <constraint firstItem="Cxu-7E-YuW" firstAttribute="trailing" secondItem="n6B-sM-CSQ" secondAttribute="trailing" constant="16" id="4OD-P6-s6c"/>
                             <constraint firstItem="frt-qD-gL8" firstAttribute="centerY" secondItem="Dni-wa-gRx" secondAttribute="centerY" id="8Fv-7t-XqX"/>
                             <constraint firstItem="U5h-lU-Due" firstAttribute="centerX" secondItem="Cxu-7E-YuW" secondAttribute="centerX" id="Ac9-cB-geI"/>
-                            <constraint firstItem="M4N-3v-H2c" firstAttribute="centerX" secondItem="n6B-sM-CSQ" secondAttribute="centerX" id="BSp-Ww-NN6"/>
-                            <constraint firstItem="M4N-3v-H2c" firstAttribute="leading" secondItem="Wcq-gA-U3x" secondAttribute="leading" id="F6C-1q-eI2"/>
-                            <constraint firstItem="M4N-3v-H2c" firstAttribute="bottom" secondItem="Cxu-7E-YuW" secondAttribute="bottom" id="HyP-3o-vR0"/>
                             <constraint firstItem="Dni-wa-gRx" firstAttribute="leading" secondItem="Cxu-7E-YuW" secondAttribute="leading" constant="16" id="Jo5-4v-aet"/>
                             <constraint firstItem="n6B-sM-CSQ" firstAttribute="leading" secondItem="Cxu-7E-YuW" secondAttribute="leading" constant="16" id="RlJ-ig-6By"/>
                             <constraint firstItem="675-ce-ib5" firstAttribute="centerX" secondItem="U5h-lU-Due" secondAttribute="centerX" id="Wde-Yh-Nb2"/>
                             <constraint firstItem="Dni-wa-gRx" firstAttribute="top" secondItem="U5h-lU-Due" secondAttribute="bottom" constant="50" id="Ybq-LZ-viB"/>
-                            <constraint firstItem="M4N-3v-H2c" firstAttribute="top" secondItem="n6B-sM-CSQ" secondAttribute="bottom" constant="58" id="dgJ-j9-gmR"/>
                             <constraint firstItem="675-ce-ib5" firstAttribute="top" secondItem="U5h-lU-Due" secondAttribute="bottom" constant="8" id="eBe-7o-4Of"/>
                             <constraint firstItem="n6B-sM-CSQ" firstAttribute="top" secondItem="Dni-wa-gRx" secondAttribute="bottom" constant="23" id="fKc-uu-hjg"/>
                         </constraints>
@@ -163,7 +128,6 @@
                     </view>
                     <connections>
                         <outlet property="recordButton" destination="U5h-lU-Due" id="iYQ-g7-ZXq"/>
-                        <outlet property="tableView" destination="M4N-3v-H2c" id="r5J-Hc-VxF"/>
                         <outlet property="volumeSlider" destination="n6B-sM-CSQ" id="yHf-fc-jKi"/>
                         <outlet property="volumeValueLabel" destination="frt-qD-gL8" id="XqJ-4T-rW0"/>
                     </connections>
